@@ -12,12 +12,13 @@
     .download { display: inline-block; margin: 1.25rem 0; background: #7dcea0; color: #102117; text-decoration: none; font-weight: 700; padding: 0.85rem 1.2rem; border-radius: 12px; }
     ol { line-height: 1.55; }
     p { line-height: 1.5; }
+    code { color: #e7c27a; }
   </style>
 </head>
 <body>
   <main>
     <h1>JavisLink</h1>
-    <p>JavisLink is a shop-floor translator. The PC on your network is the translation server. The phone does not translate on its own. It scans the QR code that PC already shows and joins that conversation.</p>
+    <p>JavisLink is a shop-floor translator. The PC on your network is the translation server. The phone does not translate on its own. On the same Wi-Fi, type the pair code from the shop PC and join that conversation.</p>
     <p><a class="download" href="javislink.apk">Download the Android APK</a></p>
     <h2>Install on the phone</h2>
     <ol>
@@ -25,10 +26,10 @@
       <li>Allow install from unknown sources when Android asks.</li>
       <li>Open the APK and install JavisLink.</li>
       <li>On the PC, from the JavisLink folder, run <code>npm run local:lan</code>. That serves the local server on port 8080.</li>
-      <li>Copy <code>certs/javislink.crt</code> onto the phone and install it as a CA certificate so the phone trusts the PC.</li>
-      <li>Open JavisLink, tap Scan, and scan the QR on the PC. The other phone scans that same link.</li>
+      <li>On the PC, open <a href="http://127.0.0.1:8080/manage">http://127.0.0.1:8080/manage</a> and read the 6-digit pair code.</li>
+      <li>On the phone, on the same Wi-Fi, open JavisLink and type that code plus the shop PC address shown on the manage page.</li>
     </ol>
-    <p>Hold the on-screen button to talk. On Android, Volume Up does the same thing while JavisLink is open. Letting go sends what you said to the PC. A very short tap cancels. iPhone uses the on-screen button.</p>
+    <p>Hold the on-screen button to talk. On Android, Volume Up does the same thing while JavisLink is open. Letting go sends what you said to the PC. A very short tap cancels.</p>
   </main>
 </body>
 </html>
